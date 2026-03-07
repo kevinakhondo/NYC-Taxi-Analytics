@@ -8,6 +8,7 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    SNOWFLAKE_PASSWORD: ${SNOWFLAKE_PASSWORD}
   volumes:
     - ./airflow/dags:/opt/airflow/dags
     - ./airflow/logs:/opt/airflow/logs

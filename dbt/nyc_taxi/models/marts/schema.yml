@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: fct_trips
+    description: "Fact table with all NYC Yellow Taxi trip records"
+    columns:
+      - name: pickup_datetime
+        description: "Trip pickup timestamp"
+        tests:
+          - not_null
+      - name: total_amount
+        description: "Total trip amount charged"
+        tests:
+          - not_null
+      - name: trip_distance
+        description: "Trip distance in miles"
+        tests:
+          - not_null
+      - name: payment_type
+        description: "Payment method used"
+        tests:
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5, 6]
+
+  - name: agg_daily_trips
+    description: "Daily aggregated trip stats by hour"
+    columns:
+      - name: pickup_date
+        description: "Date of trips"
+        tests:
+          - not_null
+      - name: total_trips
+        description: "Total number of trips"
+        tests:
+          - not_null
