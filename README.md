@@ -49,3 +49,9 @@ nyc-taxi-analytics/
 
 ## Data Source
 [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) — Yellow Taxi, Jan–Feb 2024
+
+## 📊 Live Dashboard
+
+🔗 [View Live Dashboard](https://loamy-shore.metabaseapp.com/public/dashboard/2d4b43c9-993a-4dff-ab80-95bf58c165e8)
+
+![Dashboard Preview](docs/dashboard.png)
