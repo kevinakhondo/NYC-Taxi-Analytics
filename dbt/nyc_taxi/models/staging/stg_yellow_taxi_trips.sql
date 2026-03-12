@@ -18,6 +18,7 @@ renamed as (
         passenger_count,
         trip_distance,
         store_and_fwd_flag,
+        month_partition,
 
         -- payment
         payment_type,
@@ -38,7 +39,7 @@ renamed as (
         trip_distance > 0
         and total_amount > 0
         and tpep_pickup_datetime >= '2024-01-01'
-        and tpep_pickup_datetime < '2024-02-01'
+        and tpep_pickup_datetime < '2025-01-01'
 )
 
 select * from renamed

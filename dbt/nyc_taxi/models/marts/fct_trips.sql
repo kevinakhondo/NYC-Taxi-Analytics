@@ -13,6 +13,7 @@ select
     pickup_datetime,
     dropoff_datetime,
     date_trunc('day', pickup_datetime)      as pickup_date,
+    date_part('month', pickup_datetime)     as pickup_month,
     date_part('hour', pickup_datetime)      as pickup_hour,
     date_part('dow', pickup_datetime)       as pickup_day_of_week,
 
@@ -20,6 +21,7 @@ select
     passenger_count,
     trip_distance,
     trip_duration_minutes,
+    month_partition,
 
     -- payment
     payment_type,

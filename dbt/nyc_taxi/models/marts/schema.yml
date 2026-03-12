@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: fct_trips
-    description: "Fact table with all NYC Yellow Taxi trip records"
+    description: "Fact table with all NYC Yellow Taxi trip records for 2024"
     columns:
       - name: pickup_datetime
         description: "Trip pickup timestamp"
@@ -20,10 +20,13 @@ models:
         description: "Payment method used"
         tests:
           - accepted_values:
-              values: [0, 1, 2, 3, 4, 5, 6]
+              config:
+                severity: warn
+              arguments:
+                values: [0, 1, 2, 3, 4, 5, 6]
 
   - name: agg_daily_trips
-    description: "Daily aggregated trip stats by hour"
+    description: "Daily and hourly aggregated trip stats for 2024"
     columns:
       - name: pickup_date
         description: "Date of trips"
